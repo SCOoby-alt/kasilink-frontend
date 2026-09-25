@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — KasiLink SA</title>
+<meta name="description" content="Get in touch with KasiLink SA, or join the platform as a plumber.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/kasilink-logo.png" alt="KasiLink SA plumber logo">
+      <span class="brand-name">KasiLink SA</span>
+    </a>
+
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="persona.html">Customer Persona</a></li>
+        <li><a href="services.html">Products / Services</a></li>
+        <li><a href="revenue.html">Revenue Model</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a href="services.html#search" class="btn btn-primary">Find a Plumber</a>
+      <a href="contact.html#join" class="btn btn-secondary">Join as a Plumber</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="hero-label">CONTACT</span>
+    <h1>Get in touch with KasiLink SA</h1>
+    <p>Questions about the platform, or ready to join as a plumber? Send us a message below.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT LAYOUT ============ -->
+<section class="section" id="join">
+  <div class="container contact-layout">
+
+    <form id="contact-form" class="form-card">
+      <h2 class="section-title" style="font-size:1.2rem;">Send a message</h2>
+      <div class="field">
+        <label for="contact-name">Full name</label>
+        <input type="text" id="contact-name" required>
+      </div>
+      <div class="field">
+        <label for="contact-email">Email address</label>
+        <input type="email" id="contact-email" required>
+      </div>
+      <div class="field">
+        <label for="contact-reason">I am contacting KasiLink SA as a</label>
+        <select id="contact-reason">
+          <option>Customer</option>
+          <option>Plumber wanting to join</option>
+          <option>Other enquiry</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" required placeholder="Tell us what you need, or a bit about your plumbing business..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      <div id="contact-message-status" class="form-msg" role="status"></div>
+    </form>
+
+    <div class="contact-info-card">
+      <h3>Contact Details</h3>
+      <ul>
+        <li>
+          <span class="label">Email</span>
+          hello@kasilinksa.co.za
+        </li>
+        <li>
+          <span class="label">Phone</span>
+          012 000 0000
+        </li>
+        <li>
+          <span class="label">Region served</span>
+          Tshwane Metro, Gauteng (pilot area)
+        </li>
+        <li>
+          <span class="label">Hours</span>
+          Mon–Sat, 07:00–18:00 (emergency callouts available with select plumbers)
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/kasilink-logo.png" alt="KasiLink SA plumber logo">
+          <span>KasiLink SA</span>
+        </div>
+        <p class="footer-tagline">Connecting Skills. Building Futures.</p>
+        <p class="footer-tagline">Don't wait for customers. Let them find you.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="persona.html">Customer Persona</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Business</h4>
+        <ul>
+          <li><a href="services.html">Products / Services</a></li>
+          <li><a href="revenue.html">Revenue Model</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>KasiLink SA</h4>
+        <ul>
+          <li>South African plumbing marketplace</li>
+          <li>Local plumbers, verified profiles</li>
+          <li>Booking, ratings &amp; support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 KasiLink SA. All rights reserved.</span>
+      <span>Connecting Skills. Building Futures.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ AI ASSISTANT (rule-based chat widget) ============ -->
+<button id="chat-toggle" class="chat-toggle" aria-expanded="false" aria-controls="chat-panel" aria-label="Open KasiLink SA assistant">💬</button>
+
+<div id="chat-panel" class="chat-panel" role="dialog" aria-label="KasiLink SA assistant">
+  <div class="chat-head">
+    <div class="chat-head-title">
+      <img src="images/kasilink-logo.png" alt="">
+      <span>KasiLink SA Assistant</span>
+    </div>
+    <button id="chat-close" class="chat-close" aria-label="Close assistant">✕</button>
+  </div>
+  <div id="chat-log" class="chat-log">
+    <div class="chat-msg bot">Hi! I'm the KasiLink SA assistant. Ask me about services, pricing, bookings, emergencies, or joining as a plumber.</div>
+  </div>
+  <div id="chat-quick-replies" class="chat-quick-replies"></div>
+  <form id="chat-form" class="chat-form">
+    <input type="text" id="chat-input" placeholder="Type a question..." aria-label="Type a question for the assistant">
+    <button type="submit">Send</button>
+  </form>
+  <p class="chat-disclaimer">KasiLink SA assistant — answers are grounded in our real service, price and plumber data.</p>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

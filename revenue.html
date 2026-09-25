@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revenue Model — KasiLink SA</title>
+<meta name="description" content="How KasiLink SA plans to generate revenue, with an interactive calculator showing revenue, cost and profit per booking volume.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/kasilink-logo.png" alt="KasiLink SA plumber logo">
+      <span class="brand-name">KasiLink SA</span>
+    </a>
+
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="persona.html">Customer Persona</a></li>
+        <li><a href="services.html">Products / Services</a></li>
+        <li><a href="revenue.html" aria-current="page">Revenue Model</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a href="services.html#search" class="btn btn-primary">Find a Plumber</a>
+      <a href="contact.html#join" class="btn btn-secondary">Join as a Plumber</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="hero-label">REVENUE MODEL</span>
+    <h1>How KasiLink SA plans to earn revenue</h1>
+    <p>A digital marketplace needs a sustainable way to cover its costs while staying affordable for local plumbers and customers.</p>
+  </div>
+</section>
+
+<!-- ============ REVENUE STREAMS ============ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Revenue streams</h2>
+    <p class="section-sub">KasiLink SA combines a small booking fee with optional paid features for plumbers.</p>
+
+    <div class="revenue-grid">
+      <div class="revenue-card">
+        <h3>Booking Fee</h3>
+        <p>A small service fee is added per confirmed booking made through the platform, similar to how the KasiLink SA booking API calculates cost per booking.</p>
+      </div>
+      <div class="revenue-card">
+        <h3>Featured Listings</h3>
+        <p>Plumbers can pay to have their profile appear higher in search results and on the home page, increasing their visibility to customers.</p>
+      </div>
+      <div class="revenue-card">
+        <h3>Verified Profile Badge</h3>
+        <p>An optional paid verification badge for plumbers who submit proof of qualifications, building extra trust with customers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COST STRUCTURE ============ -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Cost structure</h2>
+    <p class="section-sub">Every booking carries a R50 platform booking fee, calculated the same way as the live KasiLink SA booking API.</p>
+
+    <div class="revenue-grid">
+      <div class="revenue-card">
+        <h3>Booking Fee</h3>
+        <p>A R50 booking fee is added to every confirmed booking before tax, covering hosting, payment processing and support.</p>
+      </div>
+      <div class="revenue-card">
+        <h3>Tax</h3>
+        <p>15% VAT is calculated on the service price plus booking fee and shown on the quotation.</p>
+      </div>
+      <div class="revenue-card">
+        <h3>Break-Even Thinking</h3>
+        <p>The calculator below shows how the booking fee income scales as booking volume grows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Revenue calculator</h2>
+    <p class="section-sub">Pick a service and number of bookings to see the projected revenue, cost and profit. This uses the same figures as the KasiLink SA API (services/prices from za.co.kasilink.KasiLink, R50 booking fee per booking). Profit is never shown as a negative amount.</p>
+
+    <form id="revenue-calculator" class="calculator">
+      <div class="calc-form">
+        <div class="field">
+          <label for="calc-service">Service (sets price per booking)</label>
+          <select id="calc-service">
+            <option value="4000">Maintenance — R4,000</option>
+            <option value="1250">Tap Repair — R1,250</option>
+            <option value="2250">Leak Repair — R2,250</option>
+            <option value="2700">Drain Unblocking — R2,700</option>
+            <option value="1600">Toilet Repair — R1,600</option>
+            <option value="1850">Pipe Repair — R1,850</option>
+            <option value="1200">Bathroom Plumbing — R1,200</option>
+            <option value="1500">Geyser Repair — R1,500</option>
+            <option value="1000">Emergency Plumbing — R1,000</option>
+            <option value="7500">New Geyser Installation — R7,500</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="calc-bookings">Number of bookings this month</label>
+          <input type="number" id="calc-bookings" min="0" value="10">
+        </div>
+      </div>
+      <div class="calc-results">
+        <h3>Projected outcome (KasiLink SA's own booking-fee revenue)</h3>
+        <div class="calc-row">
+          <span>Revenue (booking fees)</span>
+          <span id="calc-revenue" class="value">R 0</span>
+        </div>
+        <div class="calc-row">
+          <span>Platform cost</span>
+          <span id="calc-cost" class="value">R 0</span>
+        </div>
+        <div class="calc-row total">
+          <span>Profit</span>
+          <span id="calc-profit" class="value">R 0</span>
+        </div>
+        <div class="calc-row">
+          <span>Example customer quote (1 booking, selected service)</span>
+          <span id="calc-example-quote" class="value">R 0</span>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/kasilink-logo.png" alt="KasiLink SA plumber logo">
+          <span>KasiLink SA</span>
+        </div>
+        <p class="footer-tagline">Connecting Skills. Building Futures.</p>
+        <p class="footer-tagline">Don't wait for customers. Let them find you.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="persona.html">Customer Persona</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Business</h4>
+        <ul>
+          <li><a href="services.html">Products / Services</a></li>
+          <li><a href="revenue.html">Revenue Model</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>KasiLink SA</h4>
+        <ul>
+          <li>South African plumbing marketplace</li>
+          <li>Local plumbers, verified profiles</li>
+          <li>Booking, ratings &amp; support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 KasiLink SA. All rights reserved.</span>
+      <span>Connecting Skills. Building Futures.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ AI ASSISTANT (rule-based chat widget) ============ -->
+<button id="chat-toggle" class="chat-toggle" aria-expanded="false" aria-controls="chat-panel" aria-label="Open KasiLink SA assistant">💬</button>
+
+<div id="chat-panel" class="chat-panel" role="dialog" aria-label="KasiLink SA assistant">
+  <div class="chat-head">
+    <div class="chat-head-title">
+      <img src="images/kasilink-logo.png" alt="">
+      <span>KasiLink SA Assistant</span>
+    </div>
+    <button id="chat-close" class="chat-close" aria-label="Close assistant">✕</button>
+  </div>
+  <div id="chat-log" class="chat-log">
+    <div class="chat-msg bot">Hi! I'm the KasiLink SA assistant. Ask me about services, pricing, bookings, emergencies, or joining as a plumber.</div>
+  </div>
+  <div id="chat-quick-replies" class="chat-quick-replies"></div>
+  <form id="chat-form" class="chat-form">
+    <input type="text" id="chat-input" placeholder="Type a question..." aria-label="Type a question for the assistant">
+    <button type="submit">Send</button>
+  </form>
+  <p class="chat-disclaimer">KasiLink SA assistant — answers are grounded in our real service, price and plumber data.</p>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

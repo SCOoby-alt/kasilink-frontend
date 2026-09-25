@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products / Services — KasiLink SA</title>
+<meta name="description" content="Browse plumbing services and plumber profiles on KasiLink SA, request a quotation, book a plumber, and leave a rating.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/kasilink-logo.png" alt="KasiLink SA plumber logo">
+      <span class="brand-name">KasiLink SA</span>
+    </a>
+
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="persona.html">Customer Persona</a></li>
+        <li><a href="services.html" aria-current="page">Products / Services</a></li>
+        <li><a href="revenue.html">Revenue Model</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a href="services.html#search" class="btn btn-primary">Find a Plumber</a>
+      <a href="contact.html#join" class="btn btn-secondary">Join as a Plumber</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="hero-label">PRODUCTS / SERVICES</span>
+    <h1>Plumbing services &amp; plumber profiles</h1>
+    <p>Everything KasiLink SA offers customers: a menu of plumbing services, real plumber profiles to compare, and a simple way to book.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICE CATEGORIES ============ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Our service categories</h2>
+    <p class="section-sub">Prices are set by the KasiLink SA backend (GET /api/services) so they always match what you're quoted at booking.</p>
+
+    <div id="service-category-grid" class="service-grid">
+      <!-- Rendered by js/script.js (renderServiceCategoryCards) -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLUMBER DIRECTORY ============ -->
+<section class="section section-alt" id="search">
+  <div class="container">
+    <h2 class="section-title">Meet our plumbers</h2>
+    <p class="section-sub">Compare experience, service areas and pricing before you book.</p>
+    <div class="demo-note">These six plumber profiles are sample business records used to demonstrate KasiLink SA's search, booking and rating features. Ratings shown come from ratings actually submitted through this site.</div>
+
+    <p id="directory-status" class="mt-0"></p>
+    <div id="plumber-directory" class="plumber-grid">
+      <!-- Plumber cards are rendered here by js/script.js (setupPlumberDirectory) -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING / REQUEST SERVICE ============ -->
+<section class="section" id="booking">
+  <div class="container">
+    <h2 class="section-title">Request a service</h2>
+    <p class="section-sub">Fill in your details to request a quotation or booking. This form matches the KasiLink SA booking API.</p>
+
+    <form id="booking-form" class="form-card">
+      <div class="field">
+        <label for="booking-name">Your name</label>
+        <input type="text" id="booking-name" required>
+      </div>
+      <div class="field">
+        <label for="booking-contact">Contact number</label>
+        <input type="tel" id="booking-contact" placeholder="e.g. 0821234567" required>
+      </div>
+      <div class="field">
+        <label for="booking-email">Email address</label>
+        <input type="email" id="booking-email" required>
+      </div>
+      <div class="field">
+        <label for="booking-location">Your service location</label>
+        <input type="text" id="booking-location" placeholder="e.g. Soshanguve South" required>
+      </div>
+      <div class="field">
+        <label for="booking-plumber">Choose a plumber</label>
+        <select id="booking-plumber" required>
+          <option value="">Select a plumber</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="booking-service">Service required</label>
+        <select id="booking-service" required>
+          <option value="">Select a service</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="booking-date">Booking date</label>
+        <input type="date" id="booking-date" required>
+      </div>
+      <div class="field">
+        <label for="booking-time">Time slot</label>
+        <select id="booking-time" required>
+          <option value="">Select a plumber and date first</option>
+        </select>
+        <p id="availability-status" class="mt-0"></p>
+      </div>
+      <div class="field">
+        <label for="booking-count">Quantity</label>
+        <input type="number" id="booking-count" min="1" value="1" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Request Service</button>
+      <div id="booking-message" class="form-msg" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ RATING ============ -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Rate a completed service</h2>
+    <p class="section-sub">Customers rate their plumber after the job is done, from 1 to 5 stars.</p>
+
+    <form id="rating-form" class="form-card">
+      <div class="field">
+        <label for="rating-plumber">Which plumber?</label>
+        <select id="rating-plumber" required>
+          <option value="">Select a plumber</option>
+          <option value="p1">Thabo Mokoena</option>
+          <option value="p2">Kabelo Maseko</option>
+          <option value="p3">Sipho Nkosi</option>
+          <option value="p4">Mpho Baloyi</option>
+          <option value="p5">Lucky Makhubele</option>
+          <option value="p6">Thabang Molefe</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="star-rating">Your rating</label>
+        <div id="star-rating" class="star-rating">
+          <button type="button" data-value="1" aria-label="1 star">★</button>
+          <button type="button" data-value="2" aria-label="2 stars">★</button>
+          <button type="button" data-value="3" aria-label="3 stars">★</button>
+          <button type="button" data-value="4" aria-label="4 stars">★</button>
+          <button type="button" data-value="5" aria-label="5 stars">★</button>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-blue btn-block">Submit Rating</button>
+      <div id="rating-message" class="form-msg" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/kasilink-logo.png" alt="KasiLink SA plumber logo">
+          <span>KasiLink SA</span>
+        </div>
+        <p class="footer-tagline">Connecting Skills. Building Futures.</p>
+        <p class="footer-tagline">Don't wait for customers. Let them find you.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="persona.html">Customer Persona</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Business</h4>
+        <ul>
+          <li><a href="services.html">Products / Services</a></li>
+          <li><a href="revenue.html">Revenue Model</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>KasiLink SA</h4>
+        <ul>
+          <li>South African plumbing marketplace</li>
+          <li>Local plumbers, verified profiles</li>
+          <li>Booking, ratings &amp; support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 KasiLink SA. All rights reserved.</span>
+      <span>Connecting Skills. Building Futures.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ AI ASSISTANT (rule-based chat widget) ============ -->
+<button id="chat-toggle" class="chat-toggle" aria-expanded="false" aria-controls="chat-panel" aria-label="Open KasiLink SA assistant">💬</button>
+
+<div id="chat-panel" class="chat-panel" role="dialog" aria-label="KasiLink SA assistant">
+  <div class="chat-head">
+    <div class="chat-head-title">
+      <img src="images/kasilink-logo.png" alt="">
+      <span>KasiLink SA Assistant</span>
+    </div>
+    <button id="chat-close" class="chat-close" aria-label="Close assistant">✕</button>
+  </div>
+  <div id="chat-log" class="chat-log">
+    <div class="chat-msg bot">Hi! I'm the KasiLink SA assistant. Ask me about services, pricing, bookings, emergencies, or joining as a plumber.</div>
+  </div>
+  <div id="chat-quick-replies" class="chat-quick-replies"></div>
+  <form id="chat-form" class="chat-form">
+    <input type="text" id="chat-input" placeholder="Type a question..." aria-label="Type a question for the assistant">
+    <button type="submit">Send</button>
+  </form>
+  <p class="chat-disclaimer">KasiLink SA assistant — answers are grounded in our real service, price and plumber data.</p>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

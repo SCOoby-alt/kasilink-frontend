@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KasiLink SA — Connecting Skills. Building Futures.</title>
+<meta name="description" content="KasiLink SA connects customers with trusted local plumbers across South Africa. Search, compare, book and review plumbing services in one place.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/kasilink-logo.png" alt="KasiLink SA plumber logo">
+      <span class="brand-name">KasiLink SA</span>
+    </a>
+
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="persona.html">Customer Persona</a></li>
+        <li><a href="services.html">Products / Services</a></li>
+        <li><a href="revenue.html">Revenue Model</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a href="services.html#search" class="btn btn-primary">Find a Plumber</a>
+      <a href="contact.html#join" class="btn btn-secondary">Join as a Plumber</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="hero-label">LOCAL SKILLS. LOCAL SOLUTIONS.</span>
+      <h1>Find the right plumber<br>when you need one.</h1>
+      <p>KasiLink SA connects customers with local skilled plumbers, making it easier to search for services, compare providers, request assistance and build trust through customer reviews.</p>
+      <div class="hero-actions">
+        <a href="services.html#search" class="btn btn-primary">Find a Plumber</a>
+        <a href="contact.html#join" class="btn btn-secondary">Join as a Plumber</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img src="images/kasilink-logo.png" alt="" class="hero-logo">
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIND A PLUMBER (search) ============ -->
+<section class="section" id="search">
+  <div class="container">
+    <h2 class="section-title">Find a plumber near you</h2>
+    <p class="section-sub">Search by location and the type of plumbing service you need. This searches our live plumber database once the KasiLink SA API is connected.</p>
+
+    <div class="search-panel">
+      <form id="plumber-search-form" class="search-form">
+        <div class="field">
+          <label for="search-location">Location</label>
+          <input type="text" id="search-location" name="location" placeholder="e.g. Mamelodi, Pretoria">
+        </div>
+        <div class="field">
+          <label for="search-service">Service</label>
+          <select id="search-service" name="service">
+            <option value="">Any service</option>
+            <option>Residential Plumbing</option>
+            <option>Leak Repairs</option>
+            <option>Installation and Maintenance</option>
+            <option>Bathroom Plumbing</option>
+            <option>Drainage Systems</option>
+            <option>Water Pipe Installation</option>
+            <option>Emergency Plumbing</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Search Plumbers</button>
+      </form>
+    </div>
+
+    <div id="search-results">
+      <p id="search-status" class="mt-0"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW KASILINK WORKS ============ -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">How KasiLink SA works</h2>
+    <p class="section-sub">A simple four-step process for customers and plumbers.</p>
+
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Customer Need</h3>
+        <p>Customer needs plumbing services in their home, office or project.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Search &amp; Connect</h3>
+        <p>Customer searches on KasiLink SA and connects with available plumbers.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Service Delivery</h3>
+        <p>The plumber provides the required plumbing service as agreed.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3>Feedback &amp; Review</h3>
+        <p>The customer gives feedback and rates the service so other customers can make informed decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFITS ============ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Benefits</h2>
+    <p class="section-sub">KasiLink SA is built to work for both sides of the marketplace.</p>
+
+    <div class="benefits-grid">
+      <div class="benefit-panel customer">
+        <h3>For Customers</h3>
+        <ul>
+          <li>Easily find suitable plumbers.</li>
+          <li>Compare plumbing services.</li>
+          <li>View plumber profiles.</li>
+          <li>Read ratings and reviews.</li>
+          <li>Request quotations.</li>
+          <li>Book services.</li>
+          <li>Make more informed decisions before hiring.</li>
+        </ul>
+      </div>
+      <div class="benefit-panel plumber">
+        <h3>For Plumbers</h3>
+        <ul>
+          <li>Increase customer visibility.</li>
+          <li>Showcase skills and experience.</li>
+          <li>Display qualifications.</li>
+          <li>Show previous projects.</li>
+          <li>Receive more enquiries.</li>
+          <li>Build a professional reputation.</li>
+          <li>Increase opportunities for paid work.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Don't wait for customers. Let them find you.</h2>
+    <p>Join KasiLink SA today as a plumber, or find trusted help for your next plumbing job.</p>
+    <div class="btn-group">
+      <a href="services.html#search" class="btn btn-primary">Find a Plumber</a>
+      <a href="contact.html#join" class="btn btn-secondary">Join as a Plumber</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/kasilink-logo.png" alt="KasiLink SA plumber logo">
+          <span>KasiLink SA</span>
+        </div>
+        <p class="footer-tagline">Connecting Skills. Building Futures.</p>
+        <p class="footer-tagline">Don't wait for customers. Let them find you.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="persona.html">Customer Persona</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Business</h4>
+        <ul>
+          <li><a href="services.html">Products / Services</a></li>
+          <li><a href="revenue.html">Revenue Model</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>KasiLink SA</h4>
+        <ul>
+          <li>South African plumbing marketplace</li>
+          <li>Local plumbers, verified profiles</li>
+          <li>Booking, ratings &amp; support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 KasiLink SA. All rights reserved.</span>
+      <span>Connecting Skills. Building Futures.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ AI ASSISTANT (rule-based chat widget) ============ -->
+<button id="chat-toggle" class="chat-toggle" aria-expanded="false" aria-controls="chat-panel" aria-label="Open KasiLink SA assistant">💬</button>
+
+<div id="chat-panel" class="chat-panel" role="dialog" aria-label="KasiLink SA assistant">
+  <div class="chat-head">
+    <div class="chat-head-title">
+      <img src="images/kasilink-logo.png" alt="">
+      <span>KasiLink SA Assistant</span>
+    </div>
+    <button id="chat-close" class="chat-close" aria-label="Close assistant">✕</button>
+  </div>
+  <div id="chat-log" class="chat-log">
+    <div class="chat-msg bot">Hi! I'm the KasiLink SA assistant. Ask me about services, pricing, bookings, emergencies, or joining as a plumber.</div>
+  </div>
+  <div id="chat-quick-replies" class="chat-quick-replies"></div>
+  <form id="chat-form" class="chat-form">
+    <input type="text" id="chat-input" placeholder="Type a question..." aria-label="Type a question for the assistant">
+    <button type="submit">Send</button>
+  </form>
+  <p class="chat-disclaimer">KasiLink SA assistant — answers are grounded in our real service, price and plumber data.</p>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
