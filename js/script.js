@@ -37,42 +37,42 @@ const FALLBACK_PLUMBERS = [
     specialisation: "Residential Plumbing", businessPhone: "071 000 0001", email: "thabo@kasilink.co.za",
     background: "Experienced in household water systems, pipe installation and leak repairs.",
     serviceAreas: ["Soshanguve South", "Soshanguve", "Mabopane", "Pretoria North"],
-    emergencyAvailable: true, imagePath: "images/plumbers/thabo-mokoena.png", rating: 0, reviewCount: 0
+    emergencyAvailable: true, imagePath: "images/plumbers/Thabo-Mokoena.jpg", rating: 0, reviewCount: 0
   },
   {
     id: "p2", name: "Kabelo Maseko", experience: 6, baseLocation: "Soshanguve South",
     specialisation: "Leak Repairs", businessPhone: "071 000 0002", email: "kabelo@kasilink.co.za",
     background: "Specialises in finding and repairing water leaks, damaged pipes, taps and toilets.",
     serviceAreas: ["Soshanguve South", "Soshanguve North", "Soshanguve", "Pretoria North"],
-    emergencyAvailable: true, imagePath: "images/plumbers/kabelo-maseko.png", rating: 0, reviewCount: 0
+    emergencyAvailable: true, imagePath: "images/plumbers/Kabelo-Maseko.jpg", rating: 0, reviewCount: 0
   },
   {
     id: "p3", name: "Sipho Nkosi", experience: 10, baseLocation: "Soshanguve West",
     specialisation: "Installation and Maintenance", businessPhone: "071 000 0003", email: "sipho@kasilink.co.za",
     background: "Experienced in residential and commercial plumbing projects.",
     serviceAreas: ["Soshanguve West", "Soshanguve", "Ga-Rankuwa", "Pretoria"],
-    emergencyAvailable: false, imagePath: "images/plumbers/sipho-nkosi.png", rating: 0, reviewCount: 0
+    emergencyAvailable: false, imagePath: "images/plumbers/Sipho-Nkosi.jpg", rating: 0, reviewCount: 0
   },
   {
     id: "p4", name: "Mpho Baloyi", experience: 5, baseLocation: "Soshanguve North",
     specialisation: "Bathroom Plumbing", businessPhone: "071 000 0004", email: "mpho@kasilink.co.za",
     background: "Specialises in toilets, showers, basins, taps and renovations.",
     serviceAreas: ["Soshanguve North", "Soshanguve", "Mabopane", "Pretoria North"],
-    emergencyAvailable: false, imagePath: "images/plumbers/mpho-baloyi.png", rating: 0, reviewCount: 0
+    emergencyAvailable: false, imagePath: "images/plumbers/Mpho-Baloyi.jpg", rating: 0, reviewCount: 0
   },
   {
     id: "p5", name: "Lucky Makhubele", experience: 6, baseLocation: "Soshanguve Block L",
     specialisation: "Drainage Systems", businessPhone: "071 000 0005", email: "lucky@kasilink.co.za",
     background: "Experienced in blocked drains, wastewater systems and drainage maintenance.",
     serviceAreas: ["Soshanguve Block L", "Soshanguve", "Mabopane"],
-    emergencyAvailable: true, imagePath: "images/plumbers/lucky-makhubele.png", rating: 0, reviewCount: 0
+    emergencyAvailable: true, imagePath: "images/plumbers/Lucky-Makhubele.jpg", rating: 0, reviewCount: 0
   },
   {
     id: "p6", name: "Thabang Molefe", experience: 11, baseLocation: "Soshanguve Block L",
     specialisation: "Water Pipe Installation", businessPhone: "071 000 0006", email: "thabang@kasilink.co.za",
     background: "Experienced in installing and repairing household water pipes.",
     serviceAreas: ["Soshanguve Block L", "Soshanguve", "Ga-Rankuwa", "Pretoria"],
-    emergencyAvailable: false, imagePath: "images/plumbers/thabang-molefe.png", rating: 0, reviewCount: 0
+    emergencyAvailable: false, imagePath: "images/plumbers/Thabang-Molefe.jpg", rating: 0, reviewCount: 0
   }
 ];
 
