@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My account — KasiLink SA</title>
+<meta name="description" content="Your KasiLink SA account and bookings.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/kasilink-logo.png" alt="KasiLink SA plumber logo">
+      <span class="brand-name">KasiLink SA</span>
+    </a>
+
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="persona.html">Customer Persona</a></li>
+        <li><a href="services.html">Products / Services</a></li>
+        <li><a href="revenue.html">Revenue Model</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a href="services.html#search" class="btn btn-primary">Find a Plumber</a>
+      <a href="contact.html#join" class="btn btn-secondary">Join as a Plumber</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="hero-label">MY ACCOUNT</span>
+    <h1>My account</h1>
+    <p>Your details and the bookings you have made.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div id="account-signed-out" class="auth-notice" hidden>
+      <p>You are not logged in.</p>
+      <a class="btn btn-primary" href="login.html?next=account.html">Log in</a>
+      <a class="btn btn-outline" href="signup.html">Sign up</a>
+    </div>
+    <div id="account-signed-in" hidden>
+      <div class="form-card">
+        <h2 class="section-title" id="account-name"></h2>
+        <ul class="profile-list">
+          <li><strong>Email:</strong> <span id="account-email"></span></li>
+          <li><strong>Phone:</strong> <span id="account-phone"></span></li>
+        </ul>
+        <button type="button" id="account-logout" class="btn btn-outline">Log out</button>
+      </div>
+      <h2 class="section-title mt-0">My bookings</h2>
+      <div id="account-bookings" class="booking-list"><p>Loading your bookings…</p></div>
+      <p><a class="btn btn-primary" href="services.html#booking">Book a plumber</a></p>
+    </div>
+  </div>
+</section>
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/kasilink-logo.png" alt="KasiLink SA plumber logo">
+          <span>KasiLink SA</span>
+        </div>
+        <p class="footer-tagline">Connecting Skills. Building Futures.</p>
+        <p class="footer-tagline">Don't wait for customers. Let them find you.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="persona.html">Customer Persona</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Business</h4>
+        <ul>
+          <li><a href="sources.html">Sources &amp; References</a></li>
+          <li><a href="services.html">Products / Services</a></li>
+          <li><a href="revenue.html">Revenue Model</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>KasiLink SA</h4>
+        <ul>
+          <li>South African plumbing marketplace</li>
+          <li>Local plumbers, verified profiles</li>
+          <li>Booking, ratings &amp; support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 KasiLink SA. All rights reserved.</span>
+      <span>Connecting Skills. Building Futures.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ AI ASSISTANT (rule-based chat widget) ============ -->
+<button id="chat-toggle" class="chat-toggle" aria-expanded="false" aria-controls="chat-panel" aria-label="Open KasiLink SA assistant">💬</button>
+
+<div id="chat-panel" class="chat-panel" role="dialog" aria-label="KasiLink SA assistant">
+  <div class="chat-head">
+    <div class="chat-head-title">
+      <img src="images/kasilink-logo.png" alt="">
+      <span>KasiLink SA Assistant</span>
+    </div>
+    <button id="chat-close" class="chat-close" aria-label="Close assistant">✕</button>
+  </div>
+  <div id="chat-log" class="chat-log">
+    <div class="chat-msg bot">Hi! I'm the KasiLink SA assistant. Ask me about services, pricing, bookings, emergencies, or joining as a plumber.</div>
+  </div>
+  <div id="chat-quick-replies" class="chat-quick-replies"></div>
+  <form id="chat-form" class="chat-form">
+    <input type="text" id="chat-input" placeholder="Type a question..." aria-label="Type a question for the assistant">
+    <button type="submit">Send</button>
+  </form>
+  <p class="chat-disclaimer">KasiLink SA assistant — answers are grounded in our real service, price and plumber data.</p>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
